@@ -1,0 +1,221 @@
+/* colore body */
+body{
+  background-color: whitesmoke;    
+}
+
+/* font per il titolo */
+h1 , h3 , p{            
+  font-family: 'Cinzel', serif;
+}
+
+/* Stile per l'icona di WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+  background-color: #20b354;
+}
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), 
+  url('./img/blanco-sfondo1.avif') center/cover no-repeat;  height: 500px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.hero p {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+
+}
+/* Bottone Semplice ma Elegante */
+.btn1 {
+  font-family: 'Cinzel', Serif; /* Font del sito */
+  font-size: 1.2rem;
+  color: white;
+  background-color: #343a40; /* Colore scuro abbinato alla navbar */
+  border: 2px solid #495057; /* Bordo grigio scuro */
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px; /* Angoli arrotondati */
+}
+
+/* Effetto Hover */
+.btn1:hover {
+  background-color: #495057; /* Colore leggermente più chiaro */
+  border-color: #6c757d; /* Cambia il bordo */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
+}
+
+/* Foto Galleria */
+.container .row img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di transizione */
+  border-radius: 10px; /* Aggiunge angoli arrotondati */
+}
+
+
+/* Effetto Hover */
+.container .row img:hover {
+  transform: scale(1.05); /* Leggero ingrandimento */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra */
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Spaziatura della Gallery */
+.container .row img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Personalizzazione delle icone social */
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6347; /* Colore arancione per hover */
+  transform: scale(1.1); /* Leggero ingrandimento */
+}
+.social-icons a,
+.navbar-nav .nav-link {
+    text-decoration: none; /* Disabilita il sottolineato */
+}
+
+/* Rimuove il sottolineato anche al passaggio del mouse */
+.social-icons a:hover,
+.navbar-nav .nav-link:hover {
+    text-decoration: none; /* Disabilita il sottolineato durante l'hover */
+}
+
+@media (max-width: 576px) {
+    .container .row img {
+        max-width: 100%; /* Garantisce che le immagini non superino la larghezza del contenitore */
+        height: auto;
+    }
+    .section-title {
+      font-size: 1.5rem;  /* Riduce la dimensione del font su schermi piccoli */
+      padding-left: 20px; /* Aggiunge più spazio a sinistra */
+      padding-right: 20px; /* Aggiunge più spazio a destra */
+  }
+}
+.map-container iframe {
+  border: 5px solid #007bff;
+  border-radius: 8px;
+}
+
+/* striscia */
+.divider {
+  width: 100%;
+  height: 2px;  /* Imposta l'altezza della striscia nera */
+  background-color: rgba(0, 0, 0, 0.503);  /* Imposta il colore della striscia */
+  margin-top: 80px;  /* Aggiunge un po' di spazio sopra la striscia */
+  margin-bottom: 30px;  /* Aggiunge un po' di spazio sotto la striscia */
+}
+
+/* caroselli */
+
+/* Imposta dimensioni fisse per il carosello */
+.swiper {
+  width: 100%;
+  max-width: 800px; /* Larghezza massima del carosello */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide all'interno del carosello */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 30px); /* Riduce la larghezza delle immagini per compensare i margini */
+  margin: 0 auto; /* Centra le slide */
+}
+
+
+/* Immagini con dimensioni uniformi */
+.swiper-slide img {
+  width: 100%; /* Occupa l'intera larghezza */
+  max-width: 100%; /* Dimensione massima controllata */
+  height: 400px; /* Altezza fissa */
+  object-fit: cover; /* Adatta l'immagine senza deformazioni */
+  border-radius: 10px; /* Angoli arrotondati */
+}
+
+/* Titolo inizialmente nascosto */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  opacity: 0; /* Nascosto inizialmente */
+  transform: translateY(-20px); /* Posizione iniziale */
+  transition: opacity 1s ease, transform 1s ease; /* Transizione per l'animazione */
+}
+
+/* Classe che si aggiunge quando il titolo diventa visibile */
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0); /* Ritorna alla posizione normale */
+}
+
+
+/* Effetto animazione */
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
