@@ -336,4 +336,14 @@ h1 , h3 , p{
   }
   
 
-  
+  /* Su schermi grandi (min-width: 992px), nascondi l'icona del toggle */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important; /* Mostra sempre il menu in linea */
+  }
+
+  /* Nascondi l'icona del toggle su schermi grandi */
+  .hamburger {
+    display: none;
+  }
+}
