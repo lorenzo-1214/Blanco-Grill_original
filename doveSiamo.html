@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blanco</title> 
-    <!-- Aggiungi il link per la favicon -->
+    <title>Blanco</title>     <!-- Aggiungi il link per la favicon -->
     <link rel="icon" href="./img/blancoLogo01-removebg-preview.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,15 +11,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- my css -->
     <link rel="stylesheet" href="./style.css">
+    <!-- swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="./index.html"><img src="./img/blancoLogo01-removebg-preview.png" width="50px" height="50px" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Nuovo toggle hamburger -->
+            <label class="hamburger">
+                <input type="checkbox" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <!-- Sezioni utili per i clienti -->
@@ -54,86 +63,66 @@
                 <div class="col-lg-6 mb-4">
                     <h4>Indirizzo</h4>
                     <!-- Link ancorato per l'indirizzo aggiornato -->
-                    <a href="https://www.google.com/maps?q=Blanco,+Pineta,+Via+Ex+Seminario,+74020+Campomarino+TA" target="_blank" class=" text-dark">
+                    <a href="https://www.google.com/maps?q=Blanco,+Pineta,+Via+Ex+Seminario,+74020+Campomarino+TA" target="_blank" class=" text-dark mb-3">
                         Blanco, Pineta, Via Ex Seminario, 74020 Campomarino TA, Italia
-                    </a>
-                    
-                    <!-- Carosello delle foto -->
-                    <h3 class="text-center my-4 text-dark">Il Nostro Locale in Immagini</h3>
-                    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Immagine 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Immagine 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Immagine 3">
-                            </div>
-                        </div>
-                        <!-- Controlli del carosello -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Precedente</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Successivo</span>
-                        </button>
+                    </a> 
+                    <div class="col-lg-6 mt-5">
+                        <div class="map-container" style="position:relative; overflow:hidden;">
+                            <!-- Mappa Google aggiornata -->
+                            <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4825.765579907087!2d17.567450273540905!3d40.30485323506168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1346b8d97b66a171%3A0x3efcc4043a5bb38c!2sBlanco%2C%20Pineta%2C%20Via%20Ex%20Seminario%2C%2074020%20Campomarino%20TA!5e0!3m2!1sit!2sit!4v1699909483412!5m2!1sit!2sit&zoom=19" 
+                            width="100%" 
+                            height="500" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
-            </section>
-            <div class="col-lg-6">
-                <div class="map-container" style="position:relative; overflow:hidden;">
-                    <!-- Mappa Google aggiornata -->
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4825.765579907087!2d17.567450273540905!3d40.30485323506168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1346b8d97b66a171%3A0x3efcc4043a5bb38c!2sBlanco%2C%20Pineta%2C%20Via%20Ex%20Seminario%2C%2074020%20Campomarino%20TA!5e0!3m2!1sit!2sit!4v1699909483412!5m2!1sit!2sit&zoom=19" 
-                    width="100%" 
-                    height="500" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
             </div>
         </div>
-    </div>
-</div>
-</section>
-
-<!-- Footer -->
-<footer class="footer mt-5">
-    <p>&copy; 2024 Blanco Grill. Tutti i diritti riservati.</p>
-    <p>
-        <a href="#" class="text-light">Privacy Policy</a> | 
-        <a href="#" class="text-light">Termini e Condizioni</a>
-    </p>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/tuoaccount" target="_blank" class="text-light mx-2">
-            <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/tuoaccount" target="_blank" class="text-light mx-2">
-            <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://wa.me/tuonumero" target="_blank" class="text-light mx-2">
-            <i class="fab fa-whatsapp fa-2x"></i>
-        </a>
-    </div>
-</footer>
-
-
-
-</section>
-<!-- Icona WhatsApp -->
-<a href="https://wa.me/3488278068" class="whatsapp-icon" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-<!-- fine icona Whatsapp -->
-
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Blanco Grill. Tutti i diritti riservati.</p>
+        <p>
+            <a href="#" class="text-light">Privacy Policy</a> | 
+            <a href="#" class="text-light">Termini e Condizioni</a>
+        </p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tuoaccount" target="_blank" class="text-light mx-2">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://www.facebook.com/tuoaccount" target="_blank" class="text-light mx-2">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://wa.me/tuonumero" target="_blank" class="text-light mx-2">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+    
+    
+    <!-- Icona Telefono -->
+    <a href="tel:+393488278068" class="phone-icon" target="_blank">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    
+    <!-- Icona WhatsApp -->
+    <a href="https://wa.me/3488278068" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- fine icona Whatsapp -->
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- my js -->
+    <script src="./script.js"></script>
+    
+    
 </body>
 </html>

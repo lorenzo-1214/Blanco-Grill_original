@@ -20,12 +20,18 @@
 </head>
 <body>
     
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="./index.html"><img src="./img/blancoLogo01-removebg-preview.png" width="50px" height="50px" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Nuovo toggle hamburger -->
+            <label class="hamburger">
+                <input type="checkbox" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <!-- Sezioni utili per i clienti -->
@@ -36,11 +42,15 @@
                         <a class="nav-link" href="./menu.html">Il Nostro Menu</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="./cantine.html">Le Nostre Cantine</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="./orari.html">Orari</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./doveSiamo.html">Dove Siamo</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -78,11 +88,19 @@
         </div>
     </div>
 
-        <!-- Bottoni Manuali: Torna al Menu e Torna alla Home -->
-        <div class="button-container text-center my-4">
-            <a href="./menu.html" class="btn btn-primary mx-2">Torna al Menu</a>
-            <a href="./index.html" class="btn btn-secondary mx-2">Torna alla Home</a>
+    <!--Button From Uiverse.io by gagan-gv -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+                <a href="./index.html"><button>Home</button></a>
+            </div>
+            <div class="col-6 d-flex justify-content-start">   
+                <a href="./menu.html"><button>Menù</button></a>
+            </div>
         </div>
+    </div>
+    
     
     
     <!-- Footer -->
