@@ -45,7 +45,7 @@ body{
 
 
 /* font per il titolo */
-h1 , h3 , p{            
+h1 , h2, h3 , p{            
   font-family: 'Cinzel', serif;
 }
 
@@ -104,6 +104,8 @@ h1 , h3 , p{
   top: 0;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid #017C8E; /* Bordo superiore blu */
+
 }
 /* Hero Section */
 .hero {
@@ -114,7 +116,6 @@ h1 , h3 , p{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-top: 5px solid #017C8E; /* Bordo superiore blu */
 
 }
 
@@ -224,7 +225,7 @@ h1 , h3 , p{
   /* striscia */
   .divider {
     width: 100%;
-    height: 2px;  /* Imposta l'altezza della striscia nera */
+    height: 4px;  /* Imposta l'altezza della striscia nera */
     background-color:#017C8E;  /* Imposta il colore della striscia */
     margin-top: 80px;  /* Aggiunge un po' di spazio sopra la striscia */
     margin-bottom: 30px;  /* Aggiunge un po' di spazio sotto la striscia */
@@ -356,7 +357,6 @@ h1 , h3 , p{
 #orari {
   background-color: #f8f9fa;
   padding: 50px 0;
-  border-top: 5px solid #017C8E; /* Bordo superiore blu */
 }
 
 #orari h2 {
