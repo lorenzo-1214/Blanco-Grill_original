@@ -35,39 +35,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 3. Generazione bottoni dinamici
-  const path = window.location.pathname;
-  const currentPage = path.substring(path.lastIndexOf("/") + 1);
-  const pagesWithButtons = {
-    "antipasti.html": "Antipasti",
-    "primi.html": "Primi Piatti",
-    "secondi.html": "Secondi Piatti",
-    "dolci.html": "Dolci",
-    "bevande.html": "Bevande",
-    "vini-rossi.html": "Vini Rossi",
-    "vini-bianchi.html": "Vini Bianchi",
-    "bollicine.html": "Bollicine",
-  };
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+    const currentPage = path.substring(path.lastIndexOf("/") + 1);
 
-  if (pagesWithButtons[currentPage]) {
-    const container = document.createElement("div");
-    container.classList.add("button-container", "text-center", "my-4");
+    const pagesWithButtons = {
+        "antipasti.html": "Antipasti",
+        "primi.html": "Primi Piatti",
+        "secondi.html": "Secondi Piatti",
+        "dolci.html": "Dolci",
+        "bevande.html": "Bevande",
+        "vini-rossi.html": "Vini Rossi",
+        "vini-bianchi.html": "Vini Bianchi",
+        "bollicine.html": "Bollicine"
+    };
 
-    const menuButton = document.createElement("a");
-    menuButton.href = "./menu.html";
-    menuButton.classList.add("btn", "btn-primary", "mx-2");
-    menuButton.textContent = "Torna al Menu";
+    if (pagesWithButtons[currentPage]) {
+        const container = document.createElement("div");
+        container.classList.add("button-container", "text-center", "my-4");
 
-    const homeButton = document.createElement("a");
-    homeButton.href = "./index.html";
-    homeButton.classList.add("btn", "btn-secondary", "mx-2");
-    homeButton.textContent = "Torna alla Home";
+        const menuButton = document.createElement("a");
+        menuButton.href = "./menu.html";
+        menuButton.classList.add("btn", "btn-primary", "mx-2");
+        menuButton.textContent = "Torna al Menu";
 
-    container.appendChild(menuButton);
-    container.appendChild(homeButton);
+        const homeButton = document.createElement("a");
+        homeButton.href = "./index.html";
+        homeButton.classList.add("btn", "btn-secondary", "mx-2");
+        homeButton.textContent = "Torna alla Home";
 
-    const footer = document.querySelector("footer");
-    if (footer) {
-      footer.parentNode.insertBefore(container, footer);
+        container.appendChild(menuButton);
+        container.appendChild(homeButton);
+
+        const footer = document.querySelector("footer");
+        if (footer) {
+            footer.parentNode.insertBefore(container, footer);
+        }
     }
-  }
 });
